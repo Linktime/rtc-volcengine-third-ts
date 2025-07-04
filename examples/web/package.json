@@ -1,0 +1,30 @@
+{
+  "name": "web-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start:server": "tsx watch server/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hono/node-server": "^1.12.0",
+    "dotenv": "^17.0.1",
+    "hono": "^4.8.3",
+    "ts-volcengine-third": "link:../..",
+    "tsx": "^4.16.2",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-basic-ssl": "^2.1.0",
+    "@vitejs/plugin-react": "^4.6.0",
+    "esbuild": "^0.25.5",
+    "vite": "^5.0.0"
+  }
+}

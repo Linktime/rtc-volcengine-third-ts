@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #record-btn, #play-btn {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        #record-btn {
+            background-color: #4CAF50;
+        }
+        #record-btn.recording {
+            background-color: #f44336;
+        }
+        #play-btn {
+            background-color: #2196F3;
+        }
+        .log-container {
+            margin-top: 2rem;
+            height: 200px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 1rem;
+            background-color: #e9e9e9;
+            border-radius: 5px;
+        }
+        .output-container {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .output-box {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            min-height: 50px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>实时语音识别</h1>
+        <div>
+            <button id="connect-btn">连接 WebSocket</button>
+            <button id="disconnect-btn">断开 WebSocket</button>
+        </div>
+        <div>
+            <button id="start-record-btn">开始录音</button>
+            <button id="stop-record-btn">停止录音</button>
+        </div>
+        <button id="play-btn">播放返回语音</button>
+        <div class="output-container">
+            <h2>ASR 输出:</h2>
+            <div id="asr-output" class="output-box"></div>
+            <h2>Chat 输出:</h2>
+            <div id="chat-output" class="output-box"></div>
+        </div>
+        <div class="log-container">
+            <h2>日志</h2>
+            <div id="log"></div>
+        </div>
+    </div>
+    <script type="module" src="/src/index.tsx"></script>
+</body>
+</html>
