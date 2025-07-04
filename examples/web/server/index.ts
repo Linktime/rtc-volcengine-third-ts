@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
 import { WebSocketServer } from 'ws';
-import { DialogSession, ServerEvent } from 'ts-volcengine-third';
+import { DialogSession, ServerEvent } from 'rtc-volcengine-third-ts';
 import dotenv from 'dotenv';
 
 dotenv.config();

@@ -51,7 +51,7 @@ importers:
       hono:
         specifier: ^4.8.3
         version: 4.8.3
-      ts-volcengine-third:
+      rtc-volcengine-third-ts:
         specifier: link:../..
         version: link:../..
       tsx:

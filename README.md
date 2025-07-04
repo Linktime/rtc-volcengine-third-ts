@@ -1,4 +1,4 @@
-# ts-volcengine-third
+# rtc-volcengine-third-ts
 
 参考 [官方API文档](https://www.volcengine.com/docs/6561/1594356)
 
@@ -6,6 +6,11 @@
 > 而如果所处环境提供的ws本身支持headers中鉴权，则不需要这么麻烦，但是由于appid和appkey是固定的，存放在端上不太安全，故而需要考虑类似上述两个ws的方案，前端和自己的服务后端采用动态鉴权。
 
 ## 基本使用方法
+
+```
+pnpm add rtc-volcengine-third-ts
+```
+
 
 参考示例 `examples/web`
 
